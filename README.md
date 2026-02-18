@@ -55,6 +55,7 @@ sudo python vscan.py
 ```
 
 > `sudo` is often required for privileged scan types (for example SYN scan).
+<img width="1060" height="742" alt="image" src="https://github.com/user-attachments/assets/6e8ad798-5d27-4b6d-bead-4a2e083a538d" />
 
 ## Interactive Commands
 
@@ -123,6 +124,14 @@ vscan > run
 	- exploit DB ID and path (when available)
 - Searchsploit entries are filtered and ranked to reduce noisy matches.
 - `SEARCHSPLOIT_MAX` controls how many searchsploit entries are shown per service.
+
+## VScan test run against metasploitable2 
+<img width="1051" height="282" alt="image" src="https://github.com/user-attachments/assets/edd8e5b7-20b3-49f8-a0cc-ebcb974f3f8f" />
+<img width="1047" height="522" alt="image" src="https://github.com/user-attachments/assets/67d7d3ac-6926-42bc-a43d-137626003b48" />
+
+## Sample HTML Report output:
+  <img width="1417" height="670" alt="image" src="https://github.com/user-attachments/assets/febbbac8-2eb6-4384-9bfb-0a74dc7d03c8" />
+<img width="1597" height="518" alt="image" src="https://github.com/user-attachments/assets/ed824c0c-e048-4462-a8aa-6a3686863fc5" />
 
 ## Troubleshooting
 
