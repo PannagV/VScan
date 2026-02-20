@@ -1,29 +1,24 @@
 # VScan
 
-VScan is an interactive vulnerability scanning console built with Python and Nmap.
-It provides a framework-style CLI (`vscan >`) to configure targets, choose scan profiles, run concurrent scans, and export reports.
+An interactive vulnerability scanning console.
+
+`vscan >` Interactive CLI to configure targets, scan profiles, concurrent scans, and reports.
 
 ## Features
 
-- Interactive console experience (similar to security frameworks): set options once, run scans repeatedly
+- Interactive console experience (like recon-ng): set options once, run repeatedly
 - Multi-target scanning with concurrency controls
-- Large set of built-in Nmap scan profiles
-- Custom Nmap argument support via `custom:<args>`
-- Service/version collection and basic CVE matching from a local lookup table
-- Optional `searchsploit` lookups per discovered service/version
-- Ranked and deduplicated `searchsploit` results for cleaner output
+- Built-in Nmap scan profiles
+- Custom Nmap argument support  `custom:<args>`
+- Service/version collection and basic CVE matching from Exploit-DB
 - Report export to JSON, TXT, CSV, and HTML
-
-## Important Note
-
-Only scan systems you own or have explicit permission to test.
 
 ## Requirements
 
 - Linux (recommended)
 - Python 3.9+
 - Nmap installed and available in PATH
-- Optional: `searchsploit` (Exploit-DB package) for exploit lookup integration
+- `searchsploit` (Exploit-DB package) for exploit lookup integration
 
 ## Installation
 
@@ -34,27 +29,22 @@ Only scan systems you own or have explicit permission to test.
 pip install -r requirements.txt
 ```
 
-3. Ensure `nmap` is installed:
-
+3. Optional Dependencies check:
 ```bash
 nmap --version
 ```
-
-4. Optional: ensure `searchsploit` is installed:
 
 ```bash
 searchsploit --version
 ```
 
-## Running VScan
-
-Run from the project directory:
+## Usage
 
 ```bash
 sudo python vscan.py
 ```
 
-> `sudo` is often required for privileged scan types (for example SYN scan).
+> `sudo` is often required for privileged scan types.
 <img width="1060" height="742" alt="image" src="https://github.com/user-attachments/assets/6e8ad798-5d27-4b6d-bead-4a2e083a538d" />
 
 ## Interactive Commands
@@ -146,8 +136,5 @@ vscan > run
 	- Tune with: `set SEARCHSPLOIT_MAX <number>`
 
 
-## Project Structure
 
-- `vscan.py` — interactive console and scanning engine
-- `requirements.txt` — Python dependencies
-- `README.md` — documentation
+### Only scan systems you own or have explicit permission to test.
